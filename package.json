@@ -1,0 +1,11 @@
+{
+  "name": "com.ambidekster.commonsolutions",
+  "version": "1.0.0",
+  "displayName": "Common Solutions",
+  "unity": "6000.0",
+  "description": "Набор стандартных решений/утилит для решения типовых задач",
+  "author": {
+    "name": "ambidekster",
+    "email": "ambidekster@icloud.com"
+  }
+}
