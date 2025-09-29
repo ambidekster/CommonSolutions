@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
 
-namespace CommonSolutions.Runtime.Providers.Assets
+namespace CommonSolutions.Runtime.Providers.Assets.ScriptableObjectAssetProviders
 {
     [Serializable]
-    public class AssetModel<TAsset> 
+    public class ScriptableObjectAssetModel<TAsset> 
             where TAsset : UnityEngine.Object
     {
         [SerializeField] private string _id;

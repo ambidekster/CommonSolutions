@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace CommonSolutions.Runtime.Providers.Assets
+namespace CommonSolutions.Runtime.Providers.Assets.ScriptableObjectAssetProviders
 {
-    public abstract class AssetProvider<TAsset> : ScriptableObject 
+    public abstract class ScriptableObjectAssetProvider<TAsset> : ScriptableObject, IAssetProvider<TAsset>
             where TAsset : UnityEngine.Object
     {
-        [SerializeField] private List<AssetModel<TAsset>> _models;
+        [SerializeField] private List<ScriptableObjectAssetModel<TAsset>> _models;
 
         public TAsset GetAsset(string id)
         {
