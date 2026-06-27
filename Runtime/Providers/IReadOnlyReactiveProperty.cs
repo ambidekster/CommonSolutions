@@ -2,7 +2,6 @@ using System;
 
 namespace CommonSolutions.Runtime.Providers
 {
-    // Todo: move to common solutions
     public interface IReadOnlyReactiveProperty<out T> where T : IEquatable<T>
     {
         T Value { get; }
