@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using CommonSolutions.Runtime.Providers;
 using UnityEngine;
 
@@ -57,6 +59,18 @@ namespace CommonSolutions.Runtime.Extensions
             
             var index = randomProvider.Random.Next(0, count);
             return source.ElementAt(index);
+        }
+        
+        public static bool IsIndexExist(this IList list, int index)
+        {
+            return index >= 0 && index < list.Count;
+        }
+        
+        public static string ToStringElements<T>(this IEnumerable<T> collection, string divider = ",")
+        {
+            var stringBuilder = new StringBuilder();
+            stringBuilder.AppendJoin(divider, collection);
+            return stringBuilder.ToString();
         }
     }
 }
