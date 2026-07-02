@@ -9,7 +9,7 @@ namespace CommonSolutions.Runtime
         {
             if(routine != null)
             {
-                return StartCoroutine(routine);
+                return base.StartCoroutine(routine);
             }
 
             return null;
@@ -19,7 +19,7 @@ namespace CommonSolutions.Runtime
         {
             if(coroutine != null)
             {
-                StopCoroutine(coroutine);
+                base.StopCoroutine(coroutine);
             }
         }
 		
@@ -27,7 +27,7 @@ namespace CommonSolutions.Runtime
         {
             if(coroutine != null)
             {
-                StopCoroutine(coroutine);
+                base.StopCoroutine(coroutine);
             }
         }
     }
